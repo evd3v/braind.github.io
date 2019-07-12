@@ -17,7 +17,7 @@ body {
 }
 
 .header .background {
-  background: url("../img/header-bg.png");
+  background: url("/img/header-bg.png");
   width: 1255px;
   height: 755px;
   margin: 0 auto;
@@ -60,7 +60,7 @@ body {
 }
 
 .header .background .overlay .top .logo {
-  background: url("../img/vapiano_logo.png");
+  background: url("/img/vapiano_logo.png");
   width: 211px;
   height: 38px;
   margin-left: -40px;
@@ -112,7 +112,7 @@ body {
 }
 
 .header .background .overlay .middle h1:before {
-  content: url("../img/curve_line.png");
+  content: url("/img/curve_line.png");
   position: relative;
   top: -50px;
   left: 70px;
@@ -289,7 +289,7 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   height: 232px;
-  background: url("../img/course_1.png") no-repeat;
+  background: url("/img/course_1.png") no-repeat;
 }
 
 .menu .full-menu .item .course .overlay-trap {
@@ -312,7 +312,7 @@ body {
 }
 
 .menu .full-menu .item .course .overlay-trap h2:after {
-  content: url("../img/curve_line_second.png");
+  content: url("/img/curve_line_second.png");
   position: absolute;
   top: 170px;
   right: 0px;
