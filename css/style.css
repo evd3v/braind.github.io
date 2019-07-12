@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #e0dccd;
+}
+
+.header .background {
+  background: url("/img/header-bg.png");
+  width: 1255px;
+  height: 755px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 50px solid #e0dccd;
+  outline-offset: -50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header .background .overlay {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 250px black;
+          box-shadow: inset 0 0 250px black;
+}
+
+.header .background .overlay .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .background .overlay .top .logo {
+  background: url("/img/vapiano_logo.png");
+  width: 211px;
+  height: 38px;
+  margin-left: -40px;
+}
+
+.header .background .overlay .top .nav-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .background .overlay .top .nav-slider li {
+  margin-left: 25px;
+  list-style-type: none;
+}
+
+.header .background .overlay .top .nav-slider li:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #e0dccd;
+}
+
+.header .background .overlay .top .nav-slider li.active:before {
+  height: 5px;
+  border: 1px solid #1f2022;
+}
+
+.header .background .overlay .top .nav-slider .active {
+  height: 5px;
+  border: 1px solid #fff;
+}
+
+.header .background .overlay .middle {
+  margin-bottom: 10px;
+  margin-left: 15px;
+  color: #ffffff;
+}
+
+.header .background .overlay .middle h1 {
+  font-weight: 900;
+  font-size: 62px;
+  text-align: center;
+}
+
+.header .background .overlay .middle h1:before {
+  content: url("/img/curve_line.png");
+  position: relative;
+  top: -50px;
+  left: 70px;
+}
+
+.header .background .overlay .middle p {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 280px;
+}
+
+.header .background .overlay .middle p:before {
+  content: "";
+  display: block;
+  position: relative;
+  left: 90px;
+  top: 12px;
+  width: 50px;
+  height: 8px;
+  background: #fff;
+}
+
+.header .background .overlay .middle:before {
+  content: "";
+  display: block;
+  position: relative;
+  left: 562px;
+  bottom: 95px;
+  width: 260px;
+  height: 1px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .background .overlay .middle:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 175px;
+  left: 350px;
+  top: 65px;
+  height: 1px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .background .overlay .bottom {
+  color: #fff;
+  font-weight: 600;
+}
+
+.header .background .overlay .bottom .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 70px;
+}
+
+.header .background .overlay .bottom .navbar li {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-right: 1px solid #fff;
+}
+
+.header .background .overlay .bottom .navbar li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+}
+
+.header .background .overlay .bottom .navbar li a:hover {
+  background: white;
+  color: #1f2022;
+}
+
+.header .background .overlay .bottom .navbar #home {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.header .background .overlay .bottom .navbar #menu {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+.header .background .overlay .bottom .navbar #speise {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+
+.header .background .overlay .bottom .navbar #galery {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.header .background .overlay .bottom .navbar #contact {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.menu .header {
+  font-family: "didotLH";
+  height: 100px;
+  width: 100%;
+  background: #212123;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.menu .header hr {
+  background: #f2ab7f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 15px;
+  border: 0;
+  height: 2px;
+}
+
+.menu .header h1:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 5px;
+  width: 60px;
+  background: #f2ab7f;
+  top: 20px;
+  left: 490px;
+}
+
+.menu .full-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "didotLH";
+}
+
+.menu .full-menu .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.menu .full-menu .item .course {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 232px;
+  background: url("/img/course_1.png") no-repeat;
+}
+
+.menu .full-menu .item .course .overlay-trap {
+  left: 350px;
+  position: absolute;
+  border-bottom: 232px solid #fff;
+  border-left: 225px solid transparent;
+  height: 0;
+  width: 8%;
+}
+
+.menu .full-menu .item .course .overlay-trap h2 {
+  font-weight: 100;
+  width: 250px;
+  position: relative;
+  font-size: 28px;
+  top: 45px;
+  right: 115px;
+  text-align: right;
+}
+
+.menu .full-menu .item .course .overlay-trap h2:after {
+  content: url("/img/curve_line_second.png");
+  position: absolute;
+  top: 170px;
+  right: 0px;
+}
+
+.menu .full-menu .item .course .overlay-trap p {
+  font-weight: 400;
+  font-family: 'Raleway';
+  font-size: 15px;
+  text-align: right;
+  width: 300px;
+  position: relative;
+  top: 65px;
+  right: 165px;
+  padding-top: 5px;
+}
+
+.menu .full-menu .item .cost {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #aaa;
+}
+/*# sourceMappingURL=style.css.map */
