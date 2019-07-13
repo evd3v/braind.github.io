@@ -12,7 +12,8 @@ body
     font-family: 'Raleway', sans-serif
 
 .wrapper
-    width: 1000px
+    width: 100%
+    max-width: 1000px
     margin: 0 auto
 
 .header
@@ -117,7 +118,7 @@ body
                 font-weight: 600
                 .navbar
                     display: flex
-                    justify-content: space-between
+                    // justify-content: space-between
                     list-style: none
                     box-sizing: border-box
                     height: 70px
@@ -135,18 +136,20 @@ body
                             background: white
                             color: $second-color
                     #home
-                        flex-grow: 2
+                        width: 17%
                     #menu
-                        flex-grow: 5
+                        width: 27%
                     #speise
-                        flex-grow: 4
+                        width: 23%
                     #galery
-                        flex-grow: 3
+                        width: 19%
                     #contact
-                        flex-grow: 2
+                        width: 14%
         
                 
 .menu
+    padding-left: 125px
+    padding-right: 125px
     .header
         font-family: "didotLH"
         height: 100px
@@ -179,14 +182,16 @@ body
         font-family: "didotLH"
         .item
             display: flex
+            align-items: center
+            justify-content: space-between
             padding-top: 50px
             padding-bottom: 50px
             .course
                 position: relative
                 box-sizing: border-box
-                flex-grow: 1
+                width: 45%
                 height: 232px
-                background: url('../img/course_1.png') no-repeat
+                // background: url('../img/course_1.png') no-repeat
                 .overlay-trap
                     left: 90px
                     position: absolute
@@ -210,13 +215,66 @@ body
                     p
                         font-weight: 400
                         font-family: 'Raleway'
-                        font-size: 15px
+                        font-size: 14px
                         text-align: right
                         width: 300px
                         position: relative
                         top: 65px 
                         right: 165px
                         padding-top: 5px
+            .course-even
+                position: relative
+                box-sizing: border-box
+                width: 45%
+                height: 232px
+                // background: url('../img/course_2.png') no-repeat
+                .overlay-trap
+                    left: 0px
+                    position: absolute
+                    border-bottom: 232px solid #fff
+                    border-right: 225px solid transparent
+                    height: 0
+                    width: 8%
+                    h2
+                        font-weight: 100
+                        width: 250px
+                        position: relative
+                        font-size: 28px
+                        top: 45px
+                        right: 60px
+                        text-align: left
+                    h2:after
+                        content: url('../img/curve_line_second.png')
+                        position: absolute
+                        top: 170px
+                        left: 0
+                    p
+                        font-weight: 400
+                        font-family: 'Raleway'
+                        font-size: 14px
+                        text-align: left
+                        width: 300px
+                        position: relative
+                        top: 65px 
+                        right: 60px 
+                        padding-top: 5px
             .cost
-                flex-grow: 1
-                background: #aaa
+                width: 45%
+                .dish
+                    background: url('../img/dish.png') no-repeat
+                    height: 96px
+                    width: 136px
+                    margin: 0 auto
+                    .overlay-cost
+                        font-family: "didotLH"
+                        font-size: 20px
+                        line-height: 96px
+                        text-align: center
+
+
+#course-1
+    background: url('../img/course_1.png') no-repeat
+#course-2
+    background: url('../img/course_2.png') no-repeat
+#course-3
+    background: url('../img/course_3.png') no-repeat

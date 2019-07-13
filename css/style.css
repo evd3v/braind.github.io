@@ -8,7 +8,8 @@ body {
 }
 
 .wrapper {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -171,9 +172,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -200,33 +198,28 @@ body {
 }
 
 .header .background .overlay .bottom .navbar #home {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  width: 17%;
 }
 
 .header .background .overlay .bottom .navbar #menu {
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
+  width: 27%;
 }
 
 .header .background .overlay .bottom .navbar #speise {
-  -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
+  width: 23%;
 }
 
 .header .background .overlay .bottom .navbar #galery {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+  width: 19%;
 }
 
 .header .background .overlay .bottom .navbar #contact {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  width: 14%;
+}
+
+.menu {
+  padding-left: 125px;
+  padding-right: 125px;
 }
 
 .menu .header {
@@ -278,6 +271,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -286,11 +285,8 @@ body {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 45%;
   height: 232px;
-  background: url("../img/course_1.png") no-repeat;
 }
 
 .menu .full-menu .item .course .overlay-trap {
@@ -322,7 +318,7 @@ body {
 .menu .full-menu .item .course .overlay-trap p {
   font-weight: 400;
   font-family: 'Raleway';
-  font-size: 15px;
+  font-size: 14px;
   text-align: right;
   width: 300px;
   position: relative;
@@ -331,10 +327,79 @@ body {
   padding-top: 5px;
 }
 
+.menu .full-menu .item .course-even {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45%;
+  height: 232px;
+}
+
+.menu .full-menu .item .course-even .overlay-trap {
+  left: 0px;
+  position: absolute;
+  border-bottom: 232px solid #fff;
+  border-right: 225px solid transparent;
+  height: 0;
+  width: 8%;
+}
+
+.menu .full-menu .item .course-even .overlay-trap h2 {
+  font-weight: 100;
+  width: 250px;
+  position: relative;
+  font-size: 28px;
+  top: 45px;
+  right: 60px;
+  text-align: left;
+}
+
+.menu .full-menu .item .course-even .overlay-trap h2:after {
+  content: url("../img/curve_line_second.png");
+  position: absolute;
+  top: 170px;
+  left: 0;
+}
+
+.menu .full-menu .item .course-even .overlay-trap p {
+  font-weight: 400;
+  font-family: 'Raleway';
+  font-size: 14px;
+  text-align: left;
+  width: 300px;
+  position: relative;
+  top: 65px;
+  right: 60px;
+  padding-top: 5px;
+}
+
 .menu .full-menu .item .cost {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  background: #aaa;
+  width: 45%;
+}
+
+.menu .full-menu .item .cost .dish {
+  background: url("../img/dish.png") no-repeat;
+  height: 96px;
+  width: 136px;
+  margin: 0 auto;
+}
+
+.menu .full-menu .item .cost .dish .overlay-cost {
+  font-family: "didotLH";
+  font-size: 20px;
+  line-height: 96px;
+  text-align: center;
+}
+
+#course-1 {
+  background: url("../img/course_1.png") no-repeat;
+}
+
+#course-2 {
+  background: url("../img/course_2.png") no-repeat;
+}
+
+#course-3 {
+  background: url("../img/course_3.png") no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
