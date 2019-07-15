@@ -50,7 +50,11 @@ window.onload = function() {
         sliderDots[count].classList.add('active');
     }
 
+
     function showModal() {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         modalWindow.style.display = 'block';
         modalOverlay.style.display = 'block';
         modalOverlay.style.opacity = 0;
@@ -60,20 +64,32 @@ window.onload = function() {
     }
 
     function hideModal() {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         let modalFade = setInterval(fade, 50);
         fadeId = modalFade;
     }
 
     navBar.onclick = function(event) {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         showModal();
         document.body.style.overflow = 'hidden';
     };
 
     modalOverlay.onclick = function(event) {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         hideModal();
     };
 
     close.onclick = function() {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         modalWindow.style.display = 'none';
         modalOverlay.style.display = 'none';
         modalOverlay.style.opacity = '0';
@@ -82,6 +98,9 @@ window.onload = function() {
     };
 
     function fade() {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         if(modalOverlay.style.opacity != 0) {
             console.log(modalWindow.style.opacity);
             modalWindow.style.opacity = +modalWindow.style.opacity - 0.2;
@@ -97,6 +116,9 @@ window.onload = function() {
     }
     
     function unFade() {
+        if(window.screen.width < 1024) {
+            return 0;
+        }
         if(modalOverlay.style.opacity < 0.55) {
             console.log(modalWindow.style.opacity);
             modalWindow.style.opacity = +modalWindow.style.opacity + 0.2;
