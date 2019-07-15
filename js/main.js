@@ -1,11 +1,11 @@
 window.onload = function() {
 
-    let bg = document.querySelector('.header .background');
-    let count = 0;
-    const IMAGES = 3;
+    let bg = document.querySelector('.header .background'); // bg image
+    let count = 0; // number of current slide
+    const IMAGES = 3; // count of slides
 
-    let sliderDots = document.querySelectorAll('.header .nav-slider li');
-    let sliderControl = document.querySelector('.header .nav-slider');
+    let sliderDots = document.querySelectorAll('.header .nav-slider li'); 
+    let sliderControl = document.querySelector('.header .nav-slider'); 
 
     let modalWindow = document.querySelector('.modal-window');
     let modalOverlay = document.querySelector('.modal-overlay');
@@ -13,24 +13,28 @@ window.onload = function() {
     let navBar = document.querySelector('.navbar');
     let close = document.querySelector('.close');
 
-    let sliderOn = setInterval(slider, 5000);
-
+    // id for clearInterfal
     let unFadeId,
     fadeId;
+
+    let sliderOn = setInterval(slider, 5000);
 
     sliderControl.onclick = function(event) {
         
         let currentItem = event.target;
-        let currentCount = +currentItem.id[4];
 
-        if(isNaN(+currentItem.id[4])) {
+        // fourth elem of id is current number
+        let currentCount = parseInt(currentItem.id[4]); 
+
+        if(isNaN(currentCount)) {
             return 0;
         }
-        clearInterval(sliderOn);
+
+        // when we click on slides nav - the interval is stopped
+        clearInterval(sliderOn); 
         bg.classList.remove('bg-' + count);
         sliderDots[count].classList.remove('active');
         count = currentCount;
-        console.log(count);
         sliderDots[count].classList.add('active');
         bg.classList.add('bg-' + count);
         sliderOn = setInterval(slider, 5000);
@@ -125,5 +129,7 @@ window.onload = function() {
             clearInterval(unFadeId);
         }
     }
+
+    
 
 };

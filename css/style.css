@@ -752,11 +752,17 @@ body {
 
 .contacts .contacts-form .form-elem input[type="submit"]:hover {
   background: #212123;
-  color: #fff;
+  color: #e0dccd;
 }
 
 .contacts .contacts-form .form-elem textarea {
   padding-top: 10px;
+}
+
+.contacts .contacts-form .form-elem input:focus,
+.contacts .contacts-form .form-elem textarea:focus {
+  outline: none;
+  border: 1px solid #1f1f21;
 }
 
 .contacts .contacts-form .google-card {
@@ -1017,6 +1023,12 @@ body {
 
 .modal-window .content .content-form form textarea {
   padding-top: 10px;
+}
+
+.modal-window .content .content-form form input:focus,
+.modal-window .content .content-form form textarea:focus {
+  outline: none;
+  border: 1px solid #1f1f21;
 }
 
 .modal-window .content .content-form .close {
