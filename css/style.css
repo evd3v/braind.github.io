@@ -4,7 +4,6 @@
 }
 
 html {
-  overflox-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
 }
 
