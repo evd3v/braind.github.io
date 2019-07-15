@@ -328,6 +328,20 @@ body {
   padding-top: 5px;
 }
 
+.menu .full-menu .item .overlay {
+  width: 75%;
+  height: 100%;
+  -webkit-box-shadow: inset -110px 1px 164px 0px rgba(247, 109, 96, 0.6);
+          box-shadow: inset -110px 1px 164px 0px rgba(247, 109, 96, 0.6);
+}
+
+.menu .full-menu .item .overlay-even {
+  width: 95%;
+  height: 100%;
+  -webkit-box-shadow: inset 195px 44px 101px 0px rgba(247, 109, 96, 0.4);
+          box-shadow: inset 195px 44px 101px 0px rgba(247, 109, 96, 0.4);
+}
+
 .menu .full-menu .item .course-even {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -392,6 +406,456 @@ body {
   text-align: center;
 }
 
+.menu .full-menu .description {
+  text-align: center;
+}
+
+.actionen {
+  min-width: 1000px;
+  margin-top: 50px;
+  padding-left: 125px;
+  padding-right: 125px;
+  font-family: "didotLH";
+}
+
+.actionen .actionen-header {
+  position: relative;
+}
+
+.actionen .actionen-header h1 {
+  font-size: 38px;
+  text-align: center;
+  color: #f2ab7f;
+}
+
+.actionen .actionen-header h1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  top: 25px;
+  left: 250px;
+  background: #f2ab7f;
+}
+
+.actionen .actionen-header h1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  top: 25px;
+  left: 600px;
+  background: #f2ab7f;
+}
+
+.actionen .actionen-header .left-square {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 20px;
+  left: 240px;
+}
+
+.actionen .actionen-header .right-square {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 20px;
+  left: 750px;
+}
+
+.actionen .actionen-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 25px;
+}
+
+.actionen .actionen-menu .actionen-menu-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 232px;
+  height: 280px;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 10px white;
+          box-shadow: inset 0px 0px 0px 10px white;
+}
+
+.actionen .actionen-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 25px;
+}
+
+.actionen .actionen-slider li {
+  margin-left: 15px;
+  list-style-type: none;
+}
+
+.actionen .actionen-slider li:first-child {
+  margin-left: 0px;
+}
+
+.actionen .actionen-slider li:before {
+  content: "";
+  display: block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 5px white;
+          box-shadow: inset 0px 0px 0px 5px white;
+}
+
+.actionen .actionen-slider li.active:before {
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+}
+
+.speisekarte {
+  min-width: 1000px;
+  margin-top: 25px;
+  padding-left: 125px;
+  padding-right: 125px;
+  background: #e0dccd;
+}
+
+.speisekarte .header {
+  font-family: "didotLH";
+  height: 100px;
+  width: 100%;
+  background: #212123;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.speisekarte .header hr {
+  background: #f2ab7f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 15px;
+  border: 0;
+  height: 2px;
+}
+
+.speisekarte .header h1:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 5px;
+  width: 60px;
+  background: #f2ab7f;
+  top: 20px;
+  left: 490px;
+}
+
+.speisekarte .speisekarte-menu {
+  font-family: "didotLH";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.speisekarte .speisekarte-menu .menu-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 10px;
+  width: 450px;
+  height: 280px;
+  background: #fff;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 10px #e0dccd;
+          box-shadow: inset 0px 0px 0px 10px #e0dccd;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-img {
+  width: 149px;
+  height: 258px;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-desc {
+  padding-top: 30px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-desc h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-desc p, .speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-desc a {
+  padding-top: 20px;
+  font-family: 'Raleway';
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.speisekarte .speisekarte-menu .menu-row .speisekarte-item .speisekarte-item-desc a {
+  color: #000;
+}
+
+.contacts {
+  min-width: 1000px;
+  padding-top: 50px;
+  padding-left: 125px;
+  padding-right: 125px;
+  background: #e0dccd;
+}
+
+.contacts .header {
+  font-family: "didotLH";
+  height: 100px;
+  width: 100%;
+  background: #212123;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contacts .header hr {
+  background: #f2ab7f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 15px;
+  border: 0;
+  height: 2px;
+}
+
+.contacts .header h1:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 5px;
+  width: 60px;
+  background: #f2ab7f;
+  top: 20px;
+  left: 490px;
+}
+
+.contacts .contacts-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Raleway';
+  font-weight: 600;
+  padding-bottom: 200px;
+}
+
+.contacts .contacts-form .form-elem {
+  padding-top: 30px;
+}
+
+.contacts .contacts-form .form-elem input,
+.contacts .contacts-form .form-elem textarea {
+  margin-top: 10px;
+  padding-left: 10px;
+  border: 1px solid #f2ab7f;
+  background: #e0dccd;
+  font-size: 18px;
+}
+
+.contacts .contacts-form .form-elem input {
+  height: 40px;
+  width: 280px;
+}
+
+.contacts .contacts-form .form-elem input[type="submit"] {
+  font-family: 'Raleway';
+  font-weight: 600;
+  height: 50px;
+}
+
+.contacts .contacts-form .google-card {
+  width: 500px;
+  height: 255px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #f2ab7f;
+  padding: 10px 15px;
+}
+
+.contacts .contacts-form .google-card iframe {
+  width: 470px;
+  height: 235px;
+}
+
+.footer {
+  min-width: 1000px;
+  padding-left: 125px;
+  padding-right: 125px;
+  position: relative;
+  background: #1f1f21;
+  height: 415px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.footer .footer-info {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-info .footer-info-item p {
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.footer .footer-info .footer-info-item:last-child span {
+  display: inline-block;
+  background: url("../img/footer_icon.png") no-repeat;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 32px;
+  width: 33px;
+}
+
+.footer .footer-info .footer-overlay {
+  position: absolute;
+  top: -65px;
+  width: 1035px;
+  height: 320px;
+  background: #fff;
+}
+
+.footer .footer-info .footer-overlay .content {
+  width: 500px;
+  font-family: "didotLH";
+  padding: 75px 50px;
+  color: #1f1f21;
+}
+
+.footer .footer-info .footer-overlay .content h1 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.footer .footer-info .footer-overlay .content h1:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  top: 30px;
+  left: 10px;
+  background: #f2ab7f;
+}
+
+.footer .footer-info .footer-overlay .content .left-square {
+  content: "";
+  display: block;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 23px;
+}
+
+.footer .footer-info .footer-overlay .content .right-square {
+  content: "";
+  display: block;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 12px;
+  left: 303px;
+}
+
+.footer .footer-info .footer-overlay .content p {
+  padding-top: 30px;
+  font-size: 19px;
+}
+
 #course-1 {
   background: url("../img/course_1.png") no-repeat;
 }
@@ -402,5 +866,33 @@ body {
 
 #course-3 {
   background: url("../img/course_3.png") no-repeat;
+}
+
+#actionen-1 {
+  background: url("../img/actionen_1.png") no-repeat;
+}
+
+#actionen-2 {
+  background: url("../img/actionen_2.png") no-repeat;
+}
+
+#actionen-3 {
+  background: url("../img/actionen_3.png") no-repeat;
+}
+
+#speisekarte-1 {
+  background: url("../img/speisekarte_1.png") no-repeat;
+}
+
+#speisekarte-2 {
+  background: url("../img/speisekarte_2.png") no-repeat;
+}
+
+#speisekarte-3 {
+  background: url("../img/speisekarte_3.png") no-repeat;
+}
+
+#speisekarte-4 {
+  background: url("../img/speisekarte_4.png") no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

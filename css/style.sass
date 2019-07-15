@@ -2,13 +2,13 @@ $main-color: #e0dccd;
 $second-color: #1f2022;
 $third-color: #212123;
 $four-color: #f2ab7f;
+$bottom-color: #1f1f21;
 
 *
     margin: 0
     padding: 0
 
 body
-
     font-family: 'Raleway', sans-serif
 
 .wrapper
@@ -118,7 +118,6 @@ body
                 font-weight: 600
                 .navbar
                     display: flex
-                    // justify-content: space-between
                     list-style: none
                     box-sizing: border-box
                     height: 70px
@@ -192,7 +191,6 @@ body
                 box-sizing: border-box
                 width: 45%
                 height: 232px
-                // background: url('../img/course_1.png') no-repeat
                 .overlay-trap
                     left: 90px
                     position: absolute
@@ -223,12 +221,19 @@ body
                         top: 65px 
                         right: 165px
                         padding-top: 5px
+            .overlay 
+                width: 75%
+                height: 100%
+                box-shadow: inset -110px 1px 164px 0px rgba(247,109,96,0.6)
+            .overlay-even
+                width: 95%
+                height: 100%
+                box-shadow: inset 195px 44px 101px 0px rgba(247,109,96,0.4)
             .course-even
                 position: relative
                 box-sizing: border-box
                 width: 45%
                 height: 232px
-                // background: url('../img/course_2.png') no-repeat
                 .overlay-trap
                     left: 0px
                     position: absolute
@@ -271,6 +276,307 @@ body
                         font-size: 20px
                         line-height: 96px
                         text-align: center
+        .description
+            text-align: center
+
+.actionen
+    min-width: 1000px
+    margin-top: 50px
+    padding-left: 125px
+    padding-right: 125px
+    font-family: "didotLH"
+    .actionen-header
+        position: relative
+        h1
+            font-size: 38px
+            text-align: center
+            color: $four-color
+        h1:before
+            content: ""
+            display: block
+            position: absolute
+            width: 150px
+            height: 1px
+            top: 25px
+            left: 250px
+            background: $four-color
+        h1:after
+            content: ""
+            display: block
+            position: absolute
+            width: 150px
+            height: 1px
+            top: 25px
+            left: 600px
+            background: $four-color
+        .left-square
+            content: ""
+            display: block
+            position: absolute
+            transform: rotate(45deg)
+            width: 10px
+            height: 10px
+            background: $four-color
+            border: 1px solid $four-color
+            box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+            top: 20px
+            left: 240px
+        .right-square
+            content: ""
+            display: block
+            position: absolute
+            transform: rotate(45deg)
+            width: 10px
+            height: 10px
+            background: $four-color
+            border: 1px solid $four-color
+            box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+            top: 20px
+            left: 750px
+    .actionen-menu
+        display: flex
+        justify-content: space-around
+        margin-top: 25px
+        .actionen-menu-item
+            box-sizing: border-box
+            width: 232px
+            height: 280px
+            border: 1px solid $four-color
+            box-shadow: inset 0px 0px 0px 10px rgba(255,255,255,1)
+            
+    .actionen-slider
+        display: flex
+        justify-content: center
+        box-sizing: border-box
+        margin-top: 25px
+        li
+            margin-left: 15px
+            list-style-type: none
+        li:first-child
+            margin-left: 0px
+        li:before
+            content: ""
+            display: block
+            transform: rotate(45deg)
+            width: 10px
+            height: 10px
+            background: $four-color
+            border: 1px solid $four-color
+            box-shadow: inset 0px 0px 0px 5px rgba(255,255,255,1)
+        li.active:before
+            box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+
+.speisekarte 
+    min-width: 1000px
+    margin-top: 25px
+    padding-left: 125px
+    padding-right: 125px
+    background: $main-color
+    .header
+        font-family: "didotLH"
+        height: 100px
+        width: 100%
+        background: $third-color
+        text-align: center
+        color: #fff
+        font-style: italic
+        font-size: 16px
+        box-sizing: border-box
+        padding-top: 10px
+        hr
+            background: $four-color
+            box-sizing: border-box
+            margin-top: 15px
+            border: 0
+            height: 2px
+        h1:after
+            content: ""
+            display: block
+            position: relative
+            height: 5px
+            width: 60px
+            background: $four-color
+            top: 20px
+            left: 490px
+    .speisekarte-menu
+        font-family: "didotLH"
+        display: flex
+        flex-direction: column
+        .menu-row
+            display: flex
+            justify-content: space-between
+            margin-top: 25px
+            .speisekarte-item
+                display: flex
+                justify-content: space-between
+                align-items: center
+                box-sizing: border-box
+                padding-left: 25px
+                padding-right: 10px
+                width: 450px
+                height: 280px
+                background: #fff
+                border: 1px solid $four-color
+                box-shadow: inset 0px 0px 0px 10px rgba(224,220,205,1)
+                .speisekarte-item-img
+                    width: 149px
+                    height: 258px
+                .speisekarte-item-desc
+                    padding-top: 30px
+                    align-self: flex-start
+                    h1
+                        font-size: 24px
+                        font-weight: 400
+                    p, a
+                        padding-top: 20px
+                        font-family: 'Raleway'
+                        font-size: 14px
+                        line-height: 20px
+                    a
+                        color: #000
+.contacts
+    min-width: 1000px
+    padding-top: 50px
+    padding-left: 125px
+    padding-right: 125px
+    background: $main-color
+    .header
+        font-family: "didotLH"
+        height: 100px
+        width: 100%
+        background: $third-color
+        text-align: center
+        color: #fff
+        font-style: italic
+        font-size: 16px
+        box-sizing: border-box
+        padding-top: 10px
+        margin-bottom: 50px
+        hr
+            background: $four-color
+            box-sizing: border-box
+            margin-top: 15px
+            border: 0
+            height: 2px
+        h1:after
+            content: ""
+            display: block
+            position: relative
+            height: 5px
+            width: 60px
+            background: $four-color
+            top: 20px
+            left: 490px     
+    .contacts-form
+        display: flex
+        justify-content: space-between
+        font-family: 'Raleway'
+        font-weight: 600
+        padding-bottom: 200px
+        .form-elem
+            padding-top: 30px
+            input, 
+            textarea
+                margin-top: 10px
+                padding-left: 10px
+                border: 1px solid $four-color
+                background: $main-color
+                font-size: 18px    
+            input
+                height: 40px
+                width: 280px 
+            input[type="submit"]
+                font-family: 'Raleway'
+                font-weight: 600
+                height: 50px 
+        .google-card
+            width: 500px
+            height: 255px
+            box-sizing: border-box
+            border: 1px solid $four-color
+            padding: 10px 15px
+            iframe
+                width: 470px
+                height: 235px
+
+.footer
+    min-width: 1000px
+    padding-left: 125px
+    padding-right: 125px
+    position: relative
+    background: $bottom-color
+    height: 415px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding-bottom: 30px
+    .footer-info
+        color: #fff
+        display: flex
+        justify-content: space-between
+        .footer-info-item
+            p
+                font-size: 12px
+                padding-top: 5px
+        .footer-info-item:last-child
+            span
+                display: inline-block
+                background: url('../img/footer_icon.png') no-repeat
+                margin-left: 10px
+                margin-right: 10px
+                height: 32px
+                width: 33px
+        .footer-overlay
+            position: absolute
+            top: -65px
+            width: 1035px
+            height: 320px
+            background: #fff
+            .content
+                width: 500px
+                font-family: "didotLH"
+                padding: 75px 50px
+                color: $bottom-color
+                h1
+                    font-weight: normal
+                    font-size: 36px
+                h1:after
+                    content: ""
+                    display: block
+                    position: relative
+                    width: 300px
+                    height: 1px
+                    top: 30px
+                    left: 10px
+                    background: $four-color
+                .left-square
+                    content: ""
+                    display: block
+                    position: relative
+                    transform: rotate(45deg)
+                    width: 10px
+                    height: 10px
+                    background: $four-color
+                    border: 1px solid $four-color
+                    box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+                    top: 23px
+                .right-square
+                    content: ""
+                    display: block
+                    position: relative
+                    transform: rotate(45deg)
+                    width: 10px
+                    height: 10px
+                    background: $four-color
+                    border: 1px solid $four-color
+                    box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+                    top: 12px
+                    left: 303px
+                p
+                    padding-top: 30px
+                    font-size: 19px
+
+                
 
 
 #course-1
@@ -279,3 +585,19 @@ body
     background: url('../img/course_2.png') no-repeat
 #course-3
     background: url('../img/course_3.png') no-repeat
+
+#actionen-1
+    background: url('../img/actionen_1.png') no-repeat
+#actionen-2
+    background: url('../img/actionen_2.png') no-repeat
+#actionen-3
+    background: url('../img/actionen_3.png') no-repeat
+
+#speisekarte-1
+    background: url('../img/speisekarte_1.png') no-repeat
+#speisekarte-2
+    background: url('../img/speisekarte_2.png') no-repeat
+#speisekarte-3
+    background: url('../img/speisekarte_3.png') no-repeat
+#speisekarte-4
+    background: url('../img/speisekarte_4.png') no-repeat
