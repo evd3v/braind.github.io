@@ -780,9 +780,9 @@ body {
   padding-top: 5px;
 }
 
-.footer .footer-info .footer-info-item:last-child span {
+.footer .footer-info .footer-info-item .footer-icon {
   display: inline-block;
-  background: url("../img/footer_icon.png") no-repeat;
+  background: url("../img/footer_icon.png");
   margin-left: 10px;
   margin-right: 10px;
   height: 32px;
