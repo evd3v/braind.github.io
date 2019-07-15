@@ -18,7 +18,7 @@ body {
 }
 
 .header .background {
-  background: url("../img/header-bg.png");
+  background: url("../img/header_bg_1.png");
   width: 1255px;
   height: 755px;
   margin: 0 auto;
@@ -729,6 +729,15 @@ body {
   font-family: 'Raleway';
   font-weight: 600;
   height: 50px;
+}
+
+.contacts .contacts-form .form-elem input[type="submit"]:hover {
+  background: #212123;
+  color: #fff;
+}
+
+.contacts .contacts-form .form-elem textarea {
+  padding-top: 10px;
 }
 
 .contacts .contacts-form .google-card {
