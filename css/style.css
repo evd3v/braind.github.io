@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+html {
+  overflox-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 body {
   font-family: 'Raleway', sans-serif;
 }
@@ -879,8 +884,196 @@ body {
   font-size: 19px;
 }
 
-.show {
-  opacity: 1;
+.modal-window {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 800px;
+  min-height: 450px;
+  background: #5094f2;
+  padding: 20px;
+  color: #fff;
+  z-index: 1010;
+  border-radius: 1%;
+  width: 1035px;
+  height: 320px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity ease 0.5s;
+  transition: opacity ease 0.5s;
+}
+
+.modal-window .content {
+  font-family: "didotLH";
+  color: #1f1f21;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-window .content .content-info {
+  padding: 75px 50px;
+  width: 45%;
+}
+
+.modal-window .content .content-info h1 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.modal-window .content .content-info h1:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  top: 30px;
+  left: 10px;
+  background: #f2ab7f;
+}
+
+.modal-window .content .content-info .left-square {
+  content: "";
+  display: block;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 23px;
+}
+
+.modal-window .content .content-info .right-square {
+  content: "";
+  display: block;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f2ab7f;
+  border: 1px solid #f2ab7f;
+  -webkit-box-shadow: inset 0px 0px 0px 2px white;
+          box-shadow: inset 0px 0px 0px 2px white;
+  top: 12px;
+  left: 303px;
+}
+
+.modal-window .content .content-info p {
+  padding-top: 30px;
+  font-size: 19px;
+}
+
+.modal-window .content .content-form {
+  padding-top: 30px;
+  width: 45%;
+}
+
+.modal-window .content .content-form h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.modal-window .content .content-form form {
+  margin-top: 20px;
+}
+
+.modal-window .content .content-form form input,
+.modal-window .content .content-form form textarea {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid #f2ab7f;
+  background: #fff;
+  font-size: 14px;
+}
+
+.modal-window .content .content-form form input {
+  height: 20px;
+  width: 200px;
+}
+
+.modal-window .content .content-form form input[type="submit"] {
+  font-family: 'Raleway';
+  font-weight: 600;
+  height: 30px;
+}
+
+.modal-window .content .content-form form input[type="submit"]:hover {
+  background: #212123;
+  color: #fff;
+}
+
+.modal-window .content .content-form form textarea {
+  padding-top: 10px;
+}
+
+.modal-window .content .content-form .close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 16px;
+  border-radius: 16px;
+  border: 1px solid #f2ab7f;
+}
+
+.modal-window .content .content-form .close:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #f2ab7f;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 13px;
+  left: 7px;
+  height: 3px;
+  width: 16px;
+}
+
+.modal-window .content .content-form .close:after {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #f2ab7f;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 13px;
+  left: 7px;
+  height: 3px;
+  width: 16px;
+}
+
+.modal-window .content .content-form .close:hover {
+  background: #1f1f21;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #000;
+  opacity: 0;
+  -webkit-transition: opacity ease 0.5s;
+  transition: opacity ease 0.5s;
 }
 
 #course-1 {

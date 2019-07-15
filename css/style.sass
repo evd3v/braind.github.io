@@ -8,6 +8,10 @@ $bottom-color: #1f1f21;
     margin: 0
     padding: 0
 
+html
+    overflox-x: hidden
+    margin-right: calc(-1 * (100vw - 100%))
+
 body
     font-family: 'Raleway', sans-serif
 
@@ -586,10 +590,145 @@ body
                     padding-top: 30px
                     font-size: 19px
 
-                
+.modal-window 
+    display: none
+    position: fixed
+    left: 50%
+    top: 50%
+    box-sizing: border-box
+    transform: translate(-50%, -50%)
+    min-width: 800px
+    min-height: 450px
+    background: #5094f2
+    padding: 20px
+    color: #fff
+    z-index: 1010
+    border-radius: 1%
+    width: 1035px
+    height: 320px
+    background: #fff
+    opacity: 0
+    transition: opacity ease 0.5s
+    .content
+        font-family: "didotLH"
+        color: $bottom-color
+        display: flex
+        justify-content: space-between
+        .content-info
+            padding: 75px 50px
+            width: 45%
+            h1
+                font-weight: normal
+                font-size: 36px
+            h1:after
+                content: ""
+                display: block
+                position: relative
+                width: 300px
+                height: 1px
+                top: 30px
+                left: 10px
+                background: $four-color
+            .left-square
+                content: ""
+                display: block
+                position: relative
+                transform: rotate(45deg)
+                width: 10px
+                height: 10px
+                background: $four-color
+                border: 1px solid $four-color
+                box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+                top: 23px
+            .right-square
+                content: ""
+                display: block
+                position: relative
+                transform: rotate(45deg)
+                width: 10px
+                height: 10px
+                background: $four-color
+                border: 1px solid $four-color
+                box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1)
+                top: 12px
+                left: 303px
+            p
+                padding-top: 30px
+                font-size: 19px
+        .content-form
+            padding-top: 30px
+            width: 45%
+            h1
+                font-size: 32px
+                font-weight: 400
+            form
+                margin-top: 20px
+                input, 
+                textarea
+                    margin-bottom: 10px
+                    padding-left: 10px
+                    border: 1px solid $four-color
+                    background: #fff
+                    font-size: 14px    
+                input
+                    height: 20px
+                    width: 200px 
+                input[type="submit"]
+                    font-family: 'Raleway'
+                    font-weight: 600
+                    height: 30px 
+                input[type="submit"]:hover
+                    background: $third-color
+                    color: #fff
+                textarea
+                    padding-top: 10px
+            .close
+                width: 32px
+                height: 32px
+                position: absolute
+                right: 0
+                top: 0
+                box-sizing: border-box
+                margin: 16px
+                border-radius: 16px
+                border: 1px solid $four-color
+            .close:before
+                display: block
+                content: ""
+                position: absolute
+                background: $four-color
+                transform: rotate(45deg)
+                top: 13px
+                left: 7px
+                height: 3px
+                width: 16px
+            .close:after
+                display: block
+                content: ""
+                position: absolute
+                background: $four-color
+                transform: rotate(-45deg)
+                top: 13px
+                left: 7px
+                height: 3px
+                width: 16px
+            .close:hover
+                background: $bottom-color
 
-.show
-    opacity: 1
+
+
+.modal-overlay 
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background:#000
+    opacity: 0
+    transition: opacity ease 0.5s
+
 
 #course-1
     background: url('../img/course_1.png') no-repeat
