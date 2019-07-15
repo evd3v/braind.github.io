@@ -18,16 +18,18 @@ body {
 }
 
 .header .background {
-  background: url("../img/header_bg_1.png");
   width: 1255px;
   height: 755px;
   margin: 0 auto;
+  opacity: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: 50px solid #e0dccd;
   outline-offset: -50px;
   padding-top: 50px;
   padding-bottom: 50px;
+  -webkit-transition: background ease 1s;
+  transition: background ease 1s;
 }
 
 .header .background .overlay {
@@ -215,6 +217,18 @@ body {
 
 .header .background .overlay .bottom .navbar #contact {
   width: 14%;
+}
+
+.header .bg-0 {
+  background: url("../img/header_bg_1.png") no-repeat;
+}
+
+.header .bg-1 {
+  background: url("../img/header_bg_2.png") no-repeat;
+}
+
+.header .bg-2 {
+  background: url("../img/header_bg_3.png") no-repeat;
 }
 
 .menu {
@@ -863,6 +877,10 @@ body {
 .footer .footer-info .footer-overlay .content p {
   padding-top: 30px;
   font-size: 19px;
+}
+
+.show {
+  opacity: 1;
 }
 
 #course-1 {

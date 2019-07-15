@@ -19,15 +19,16 @@ body
 .header
     background: $main-color
     .background
-        background: url("../img/header_bg_1.png")
         width: 1255px
         height: 755px
         margin: 0 auto
+        opacity: 1
         box-sizing: border-box
         outline: 50px solid $main-color
         outline-offset: -50px
         padding-top: 50px
         padding-bottom: 50px
+        transition: background ease 1s
         .overlay
             box-sizing: border-box
             display: flex
@@ -144,7 +145,12 @@ body
                         width: 19%
                     #contact
                         width: 14%
-        
+    .bg-0
+        background: url("../img/header_bg_1.png") no-repeat
+    .bg-1
+        background: url("../img/header_bg_2.png") no-repeat
+    .bg-2
+        background: url("../img/header_bg_3.png") no-repeat
                 
 .menu
     min-width: 1000px
@@ -582,6 +588,8 @@ body
 
                 
 
+.show
+    opacity: 1
 
 #course-1
     background: url('../img/course_1.png') no-repeat
@@ -605,3 +613,5 @@ body
     background: url('../img/speisekarte_3.png') no-repeat
 #speisekarte-4
     background: url('../img/speisekarte_4.png') no-repeat
+
+
