@@ -57,8 +57,8 @@ window.onload = function() {
         }
         modalWindow.style.display = 'block';
         modalOverlay.style.display = 'block';
-        modalOverlay.style.opacity = 0;
-        modalWindow.style.opacity = 0;
+        modalOverlay.style.opacity = '0';
+        modalWindow.style.opacity = '0';
         let modalUnFade = setInterval(unFade, 50);
         unFadeId = modalUnFade;
     }
@@ -102,7 +102,6 @@ window.onload = function() {
             return 0;
         }
         if(modalOverlay.style.opacity != 0) {
-            console.log(modalWindow.style.opacity);
             modalWindow.style.opacity = +modalWindow.style.opacity - 0.2;
             modalOverlay.style.opacity = +modalOverlay.style.opacity - 0.1;
         } else {
@@ -120,7 +119,6 @@ window.onload = function() {
             return 0;
         }
         if(modalOverlay.style.opacity < 0.55) {
-            console.log(modalWindow.style.opacity);
             modalWindow.style.opacity = +modalWindow.style.opacity + 0.2;
             modalOverlay.style.opacity = +modalOverlay.style.opacity + 0.1;
         } else {
