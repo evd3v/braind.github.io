@@ -184,6 +184,26 @@ body {
   height: 70px;
 }
 
+.header .background .overlay .bottom .navbar .navbar-home {
+  width: 17%;
+}
+
+.header .background .overlay .bottom .navbar .navbar-menu {
+  width: 27%;
+}
+
+.header .background .overlay .bottom .navbar .navbar-speise {
+  width: 23%;
+}
+
+.header .background .overlay .bottom .navbar .navbar-galery {
+  width: 19%;
+}
+
+.header .background .overlay .bottom .navbar .navbar-contact {
+  width: 14%;
+}
+
 .header .background .overlay .bottom .navbar li {
   height: 70px;
   line-height: 70px;
@@ -201,26 +221,6 @@ body {
 .header .background .overlay .bottom .navbar li a:hover {
   background: white;
   color: #1f2022;
-}
-
-.header .background .overlay .bottom .navbar #home {
-  width: 17%;
-}
-
-.header .background .overlay .bottom .navbar #menu {
-  width: 27%;
-}
-
-.header .background .overlay .bottom .navbar #speise {
-  width: 23%;
-}
-
-.header .background .overlay .bottom .navbar #galery {
-  width: 19%;
-}
-
-.header .background .overlay .bottom .navbar #contact {
-  width: 14%;
 }
 
 .header .bg-0 {
@@ -1087,43 +1087,43 @@ body {
   transition: opacity ease 0.5s;
 }
 
-#course-1 {
+.course-1 {
   background: url("../img/course_1.png") no-repeat;
 }
 
-#course-2 {
+.course-2 {
   background: url("../img/course_2.png") no-repeat;
 }
 
-#course-3 {
+.course-3 {
   background: url("../img/course_3.png") no-repeat;
 }
 
-#actionen-1 {
+.actionen-1 {
   background: url("../img/actionen_1.png") no-repeat;
 }
 
-#actionen-2 {
+.actionen-2 {
   background: url("../img/actionen_2.png") no-repeat;
 }
 
-#actionen-3 {
+.actionen-3 {
   background: url("../img/actionen_3.png") no-repeat;
 }
 
-#speisekarte-1 {
+.speisekarte-1 {
   background: url("../img/speisekarte_1.png") no-repeat;
 }
 
-#speisekarte-2 {
+.speisekarte-2 {
   background: url("../img/speisekarte_2.png") no-repeat;
 }
 
-#speisekarte-3 {
+.speisekarte-3 {
   background: url("../img/speisekarte_3.png") no-repeat;
 }
 
-#speisekarte-4 {
+.speisekarte-4 {
   background: url("../img/speisekarte_4.png") no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

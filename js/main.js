@@ -22,9 +22,9 @@ window.onload = function() {
     sliderControl.onclick = function(event) {
         
         let currentItem = event.target;
-
-        // fourth elem of id is current number
-        let currentCount = parseInt(currentItem.id[4]); 
+        console.dir(currentItem.classList);
+        // drag number of nav onlick 
+        let currentCount = parseInt(currentItem.classList[0].match(/\d+/)); 
 
         if(isNaN(currentCount)) {
             return 0;
