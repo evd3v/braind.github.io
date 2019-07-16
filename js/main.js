@@ -17,19 +17,30 @@ window.onload = function() {
     let unFadeId,
     fadeId;
 
+    const overlayOpacityStep = 0.1;
+    const modalOpacityStep = 0.2; 
+
     let sliderOn = setInterval(slider, 5000);
 
-    sliderControl.onclick = function(event) {
+    sliderControl.onclick = interraptSlider;
+    
+    navBar.onclick = showModal;
+
+    modalOverlay.onclick = hideModal;
+
+    close.onclick = closeModal;
+
+    
+    function interraptSlider(event) {
         
         let currentItem = event.target;
         console.dir(currentItem.classList);
         // drag number of nav onlick 
         let currentCount = parseInt(currentItem.classList[0].match(/\d+/)); 
-
+        // check the correction of count
         if(isNaN(currentCount)) {
             return 0;
         }
-
         // when we click on slides nav - the interval is stopped
         clearInterval(sliderOn); 
         bg.classList.remove('bg-' + count);
@@ -37,8 +48,10 @@ window.onload = function() {
         count = currentCount;
         sliderDots[count].classList.add('active');
         bg.classList.add('bg-' + count);
+        // and than we start interval again
         sliderOn = setInterval(slider, 5000);
-    };
+
+    }
 
     function slider() {
         bg.classList.remove('bg-' + count);
@@ -53,83 +66,66 @@ window.onload = function() {
         bg.classList.add('bg-' + count);
         sliderDots[count].classList.add('active');
     }
-
-
-    function showModal() {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
-        modalWindow.style.display = 'block';
-        modalOverlay.style.display = 'block';
-        modalOverlay.style.opacity = '0';
-        modalWindow.style.opacity = '0';
-        let modalUnFade = setInterval(unFade, 50);
-        unFadeId = modalUnFade;
-    }
-
-    function hideModal() {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
-        let modalFade = setInterval(fade, 50);
-        fadeId = modalFade;
-    }
-
-    navBar.onclick = function(event) {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
-        showModal();
-        document.body.style.overflow = 'hidden';
-    };
-
-    modalOverlay.onclick = function(event) {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
-        hideModal();
-    };
-
-    close.onclick = function() {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
-        modalWindow.style.display = 'none';
-        modalOverlay.style.display = 'none';
-        modalOverlay.style.opacity = '0';
-        modalWindow.style.opacity = '0';
-        document.body.style.overflow = 'auto';
-    };
-
+    
     function fade() {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
         if(modalOverlay.style.opacity != 0) {
-            modalWindow.style.opacity = +modalWindow.style.opacity - 0.2;
-            modalOverlay.style.opacity = +modalOverlay.style.opacity - 0.1;
+            modalWindow.style.opacity -= modalOpacityStep;
+            modalOverlay.style.opacity -= overlayOpacityStep;
         } else {
             setTimeout(function() {
-                modalWindow.style.display = 'none';
-                modalOverlay.style.display = 'none';
-                document.body.style.overflow = 'auto';
+                addStyleGroup([modalOverlay,
+                    modalWindow], 'display', 'none');
+                addStyleElement(document.body, 'overflow', 'auto');
             }, 250);
             clearInterval(fadeId);
         }
     }
     
     function unFade() {
-        if(window.screen.width < 1024) {
-            return 0;
-        }
         if(modalOverlay.style.opacity < 0.55) {
-            modalWindow.style.opacity = +modalWindow.style.opacity + 0.2;
-            modalOverlay.style.opacity = +modalOverlay.style.opacity + 0.1;
+            modalWindow.style.opacity = +modalWindow.style.opacity +
+                                        modalOpacityStep;
+
+            modalOverlay.style.opacity = +modalOverlay.style.opacity + 
+                                        overlayOpacityStep;
         } else {
             clearInterval(unFadeId);
         }
     }
 
-    
+    function showModal() {
+        if(window.screen.width < 1024) {
+            return false;
+        }
+        addStyleGroup([modalOverlay,
+            modalWindow], 'display', 'block');
+        addStyleGroup([modalOverlay,
+            modalWindow], 'opacity', '0');  
+        addStyleElement(document.body, 'overflow', 'hidden');    
+        unFadeId = setInterval(unFade, 50);
+    }
 
+    function hideModal() {
+        fadeId = setInterval(fade, 50);
+    }
+
+    function closeModal() {
+        addStyleGroup([modalOverlay,
+                        modalWindow], 'display', 'none');
+        addStyleGroup([modalOverlay,
+                        modalWindow], 'opacity', '0');  
+        addStyleElement(document.body, 'overflow', 'auto');
+    }
+
+
+    function addStyleGroup(elements, changeStyle, value) {
+        for(let i = 0; i < elements.length; i++) {
+            elements[i].style[changeStyle] = value;
+        }
+    }
+
+
+    function addStyleElement(element, changeStyle, value) {
+        element.style[changeStyle] = value;
+    }
 };
